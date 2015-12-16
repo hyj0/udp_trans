@@ -2,13 +2,14 @@
 
 import socket
 
-address = ('127.0.0.1', 31500)
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+if __name__ == '__main__':
+    address = ('127.0.0.1', 31500)
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-while True:
-    msg = raw_input()
-    if not msg:
-        break
-    s.sendto(msg, address)
+    while True:
+        msg = raw_input()
+        if not msg:
+            break
+        s.sendto(msg, address)
 
-s.close()
+    s.close()
