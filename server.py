@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import socket
 
 address = ('127.0.0.1', 31500)
