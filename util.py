@@ -6,6 +6,11 @@ def readfile(file):
     f.close()
     return src
 
+def writefile(file, src):
+    f = open(file, 'w')
+    f.write(src)
+    f.close()
+
 def md5file(localfile):
     f = open(localfile, 'r')
     src = f.read()
@@ -23,3 +28,5 @@ if __name__ == '__main__':
     print(md5str(''))
     print(readfile('README.md'))
     print(md5file('README.md'))
+
+    writefile('testW.txt', readfile('README.md'))
